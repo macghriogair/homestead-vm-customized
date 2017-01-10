@@ -1,0 +1,33 @@
+.vagrant/
+vendor/
+build/
+version.properties
+
+# -----------------
+# General
+# -----------------
+
+.DS_STORE
+*.php~
+*.orig
+
+# -----------------
+# Editor / IDE
+# -----------------
+
+*.sublime-project
+*.sublime-workspace
+sftp-config.json
+.idea/
+nbproject/private/
+nbproject/project.properties
+nbproject/project.xml
+nbproject/project.properties
+nbproject/project.xml
+*.css.map
+apps/master/public/css/app.css
+apps/master/public/js/app.js
+apps/master/public/css/backend.css
+apps/master/public/js/backend.js
+apps/master/public/fonts/
+apps/master/public/ckeditor/

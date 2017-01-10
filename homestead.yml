@@ -1,0 +1,41 @@
+---
+ip: "192.168.10.10"
+memory: 2048
+cpus: 2
+hostname: ppm-vagrant
+name: ppm-vagrant
+box: laravel/homestead
+version: ">=1.0.0"
+provider: virtualbox
+
+authorize: ~/.ssh/id_rsa.pub
+
+keys:
+    - ~/.ssh/id_rsa
+
+sites:
+    - map: mehr-jobs.dev
+      to: "/var/www/master/public"
+      alias: "jobs"
+      schedule: true
+    - map: mehr-zukunft.dev
+      to: "/var/www/master/public"
+      alias: "future"
+      schedule: true
+
+databases:
+    - homestead
+
+mariadb: true
+
+networks:
+    - type: "private_network"
+      ip: "192.168.10.10"
+
+
+# ports:
+#     - send: 50000
+#       to: 5000
+#     - send: 7777
+#       to: 777
+#       protocol: udp
